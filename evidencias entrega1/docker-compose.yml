@@ -1,0 +1,20 @@
+version: "3.8"
+
+networks:
+  red-taller:
+    driver: bridge
+
+services:
+  ubuntu1:
+    image: ubuntu
+    container_name: ubuntu1
+    networks:
+      - red-taller
+    tty: true # Esto mantiene el contenedor vivo en segundo plano
+
+  ubuntu2:
+    image: ubuntu
+    container_name: ubuntu2
+    networks:
+      - red-taller
+    tty: true

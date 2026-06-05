@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_HOST = 'tcp://localhost:2375'
+    }
+
     stages {
         stage('1. Descargar Repositorio') {
             steps {

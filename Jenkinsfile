@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'Levantando los contenedores de Ubuntu y la red...'
                 // Cambiamos 'sh' por 'bat'
-                bat 'docker compose up -d'
+                bat 'docker compose up -d --force-recreate'
             }
         }
 

@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('1. Descargar Repositorio') {
             steps {
-                echo 'Clonando el repositorio desde GitHub..'
+                echo 'Clonando el repositorio desde GitHub para Jenkins '
                 checkout scm
             }
         }

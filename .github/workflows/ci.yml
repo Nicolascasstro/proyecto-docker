@@ -1,0 +1,16 @@
+name: CI Docker Compose
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repo
+      uses: actions/checkout@v4
+
+    - name: Levantar Docker Compose
+      run: docker compose up -d
